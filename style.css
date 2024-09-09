@@ -5,3 +5,51 @@
 }
 
 /* write your CSS here */
+
+.body {
+    background-color: #F5E7DA;
+}
+
+.card-component {
+    display: flex;
+    border: 2px black solid;
+    background-color: white;
+    width: 350px;
+    height: 13cm;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-image {
+    grid-area: blog-image;
+    width: 350px;
+    /* margin-top: 0px;
+    padding-top: 0px; */
+}
+
+.blog-type {
+    grid-area: blog-type;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    background-color: #F97315;
+    border: 1px solid #F97315;
+    width: 140px;
+}
+
+.grid-blog {
+    display: grid;
+    grid-template-areas:
+        "blog-image"
+        "blog-type";
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.image-profile {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+}
