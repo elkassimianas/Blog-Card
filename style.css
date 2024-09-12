@@ -2,54 +2,119 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
 }
 
 /* write your CSS here */
 
 .body {
     background-color: #F5E7DA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .card-component {
     display: flex;
-    border: 2px black solid;
+    /* border: 2px black solid; */
     background-color: white;
-    width: 350px;
-    height: 13cm;
+    flex-direction: column;
+    width: 380px;
+    height: 15cm;
     cursor: pointer;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    margin: 0;
+    padding: 0;
+}
+
+.blog-title {
+    font-weight: normal;
+    padding-bottom: 12px;
+}
+
+.blog-text {
+    font-weight: normal;
+    color: rgb(66, 65, 65);
 }
 
 
 .card-image {
     grid-area: blog-image;
-    width: 350px;
-    /* margin-top: 0px;
-    padding-top: 0px; */
+    width: 100%;
+    height: 6cm;
+    object-fit: cover;
+    /* margin: 0;
+    padding: 0; */
+    border-top-left-radius: 12px; /* Matches the card's top-left corner */
+    border-top-right-radius: 12px;
+    margin-bottom: -55px;
 }
 
 .blog-type {
     grid-area: blog-type;
     border-radius: 10px;
     color: white;
+    font-weight: lighter;
     text-align: center;
     background-color: #F97315;
     border: 1px solid #F97315;
     width: 140px;
+    margin-bottom: -65px;
+    margin-left: 25px;
+}
+
+
+.profile-image {
+    grid-area: profile-image;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: normal;
+    grid-area: profile-name;
+}
+
+.prf-logtime {
+    margin-bottom: 10px;
+    color: gray;
+    grid-area: prf-logtime;
+}
+
+.profile {
+    display: grid;
+    grid-area: profile;
+    grid-template-areas:
+    "profile-image  profile-name"
+    "profile-image  prf-logtime";
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    margin-left: 25px;
+}
+
+.content {
+    grid-area: content;
+    margin-left: 25px;
+    margin-bottom: -20px;
 }
 
 .grid-blog {
     display: grid;
     grid-template-areas:
-        "blog-image"
-        "blog-type";
+    "blog-image"
+    "blog-type"
+    "content"
+    "profile";
     row-gap: 10px;
     column-gap: 10px;
-}
-
-.image-profile {
-    height: 55px;
-    width: 55px;
-    border-radius: 50%;
+    margin: 0;
+    padding: 0;
 }
